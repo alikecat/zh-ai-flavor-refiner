@@ -1,0 +1,16 @@
+# Private corpus and sensitive materials
+private-test-corpus/
+real-corpus/
+*.private.md
+*.secret.md
+*.local.md
+
+# System and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python caches
+__pycache__/
+*.pyc
