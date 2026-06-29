@@ -25,24 +25,18 @@ zh-ai-flavor-refiner/
     ├── patterns-zh.md
     ├── scene-matrix.md
     ├── protected-spans.md
-    └── detector-feedback.md
+    ├── detector-feedback.md
+    └── voice-recovery.md
 ```
+
+## 两种模式
+
+- **quick（默认）**：大多数场景。不加载 reference，只扫篇章/句壳/词汇三层，aggressive 强度，直接输出。适用于公众号、社交文本、工作消息。
+- **full**：论文、公文、法律、技术文档、带检测报告、用户明确要求审校。加载 reference，8 层诊断，standard 强度，保真回读。
 
 ## 使用方式
 
-把整个目录复制到支持 Skill 的工具目录，或直接把 `SKILL.md` 作为入口规则使用。处理文本时，建议遵循：
-
-```text
-判定场景 → 划定保护区 → 扫描机械感模式 → 局部修订 → 保真回读
-```
-
-## 核心原则
-
-1. 先判场景，再判力度。
-2. 先划保护区，再谈改写。
-3. 检测反馈只作定位信号，不覆盖事实、术语、引用和文本用途。
-4. 规则文件、词表、检测报告属于元文本，不能按普通正文误判。
-5. 优先局部修订，不默认重写全文。
+把整个目录复制到支持 Skill 的 tools 目录。触发词包括"去模板味""说人话""humanize""机器味太重"等。
 
 ## 隐私规则
 
